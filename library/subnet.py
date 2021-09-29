@@ -58,7 +58,7 @@ class Subnet:
         filter given IP
         """
 
-        filter = r'[\d]{1,3}\.[\d]{1,3}\.[\d]{1,3}\.[\d]{1,3}'
+        filter = r'[\d]{1,3}\.[\d]{1,3}\.[\d]{1,3}\.[\d]{1,3}$'
 
         return regex(filter, ip) is not None
 
@@ -80,7 +80,7 @@ class Subnet:
             0, 128, 192, 224, 240,
             248, 252, 254, 255
         ]
-        filter = r'[\d]{1,3}\.[\d]{1,3}\.[\d]{1,3}\.[\d]{1,3}'
+        filter = r'[\d]{1,3}\.[\d]{1,3}\.[\d]{1,3}\.[\d]{1,3}$'
 
         if regex(filter, netmask) is not None:
             for mask in netmask.split("."):
