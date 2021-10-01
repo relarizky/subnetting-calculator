@@ -5,15 +5,20 @@
 
 
 from flask import Flask
-from flask_restplus import Api
+from flask_restx import Api
 from random import randint
 
 
-app_object = Flask(__name__, static_folder="../asset")
+app_object = Flask(
+    __name__,
+    static_folder="../asset",
+    template_folder="../view"
+)
 app_object.config.update({"DEBUG": True})
-app_object.config.update({"SECRET_KEY": randint(10000, 31337)})
-api_object = Api(app_object, prefix="/calculator")
+app_object.config.update({"SECRET_KEY": str(randint(10000, 31337))})
+api_object = Api(app_object, prefix="/api", doc="/api/doc")
 
 
 import app.filter
-import app.register
+import controller.web.index
+import controller.api.subnetting

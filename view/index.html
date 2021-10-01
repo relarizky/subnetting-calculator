@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Farel Ananda Rizky">
+  <meta name="viewport" content="width=400, initial-scale=.8,user-scalable=no">
+  <meta name="keywords" content="Subnetting Calculator, Subnetting">
+  <title> Subnetting Calculator </title>
+  <link rel="stylesheet" href="/asset/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+        crossorigin="anonymous"/>
+</head>
+<body>
+
+  <div class="container">
+    <h3>
+      <pre>
+    _____ _____     _____       _                _   _   _
+   |_   _|  __ \   / ____|     | |              | | | | (_)
+     | | | |__) | | (___  _   _| |__  _ __   ___| |_| |_ _ _ __   __ _
+     | | |  ___/   \___ \| | | | '_ \| '_ \ / _ \ __| __| | '_ \ / _` |
+    _| |_| |       ____) | |_| | |_) | | | |  __/ |_| |_| | | | | (_| |
+   |_____|_|      |_____/ \__,_|_.__/|_| |_|\___|\__|\__|_|_| |_|\__, |
+                                                                  __/ |
+                                                                 |___/
+      </pre>
+    </h3>
+
+    <hr>
+
+    <form class="form">
+      <div class="form-row">
+        <div class="col-sm-7">
+          <input type="text"
+                 name="ip"
+                 class="form-control form-control-lg"
+                 placeholder="192.168.1.0/24 or 192.168.1.0"
+                 oninput="subnetting()">
+        </div>
+        <div class="col-sm-4">
+          <input type="text"
+                 name="netmask"
+                 class="form-control form-control-lg"
+                 placeholder="255.255.255.0"
+                 oninput="subnetting()">
+        </div>
+        <div class="col-sm-1">
+          <a class="btn btn-dark btn-lg" role="button" aria-disabled="true">
+            - <i class="fa fa-search"></i> -
+          </a>
+        </div>
+      </div>
+    </form>
+
+    <hr>
+
+    <table class="table table-bordered table-hover text-center">
+      <thead class="thead-dark">
+        <tr>
+          <th>#</th>
+          <th>Subnetting</th>
+        </tr>
+      </thead>
+      <tbody id="subnetting-table">
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Optional Javascript -->
+  <script src="/asset/js/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
+  <script src="/asset/js/popper.min.js" type="text/javascript"></script>
+  <script src="/asset/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="/asset/js/main.js" type="text/javascript"></script>
+</body>
+</html>
