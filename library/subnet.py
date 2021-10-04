@@ -33,7 +33,7 @@ class Subnet:
     @classmethod
     def with_cidr(cls, ip_with_cidr: str) -> Subnet:
         """
-        create an Subnet object from with CIDR prefix
+        create an Subnet object with CIDR prefix
         """
 
         ip, cidr = ip_with_cidr.split("/")
